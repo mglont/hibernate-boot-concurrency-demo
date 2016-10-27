@@ -5,7 +5,9 @@ import random.domain.User
 import org.springframework.data.repository.CrudRepository
 
 interface UserRepository extends CrudRepository<User, Long> {
-    User save(User u)
+    User findOne(Long id)
     User findByUsername(String username)
-    Set<User> findAll()
+    List<User> findAll()
+    User save(User u)
+    void flush()
 }
