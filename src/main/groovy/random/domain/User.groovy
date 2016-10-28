@@ -16,7 +16,7 @@ class User implements Serializable {
     String password
 
     String toString() {
-        "User $username -- $password"
+        "User #${id} $username"
     }
 
     boolean equals(def other) {

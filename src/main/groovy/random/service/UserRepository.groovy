@@ -1,10 +1,9 @@
 package random.service
 
+import org.springframework.data.jpa.repository.JpaRepository
 import random.domain.User
 
-import org.springframework.data.repository.CrudRepository
-
-interface UserRepository extends CrudRepository<User, Long> {
+interface UserRepository extends JpaRepository<User, Long> {
     User findOne(Long id)
     User findByUsername(String username)
     List<User> findAll()
